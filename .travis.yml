@@ -7,3 +7,30 @@ jobs:
     - stage: build
       name: Build da aplicação JavaScript
       script: npm install
+
+      - stage: deploy
+      name: Conecta no Heroku e faz o deploy
+      script: skip
+      deploy:
+        provider: heroku
+        api_key: $HEROKU_API
+        app: pretalab-ci-cd-marylly
+        on: master
+      language: node_js
+      os: linux
+      node_js:
+        - 14
+      jobs:
+        include:
+          - stage: build
+            name: Build da aplicação JavaScript
+            script: npm install
+
+          - stage: deploy
+            name: Conecta no Heroku e faz o deploy
+            script: skip
+            deploy:
+              provider: heroku
+              api_key: $HEROKU_API
+              app: pretalab-ci-cd-marylly
+              on: master  
