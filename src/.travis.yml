@@ -1,0 +1,9 @@
+language: node_js
+os: linux
+node_js:
+  - 14
+jobs:
+  include:
+    - stage: build
+      name: Build da aplicação JavaScript
+      script: npm install
