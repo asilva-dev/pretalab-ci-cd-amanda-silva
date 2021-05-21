@@ -1,0 +1,29 @@
+{
+  "name": "pretalab-ci-cd-tutorial",
+  "version": "0.0.1",
+  "description": "Tutorial de construção do primeiro pipeline com CI e CD",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest",
+    "linter": "eslint src/**/*.js",
+    "linter:fix": "eslint --fix src/**/*.js"
+  },
+  "keywords": [
+    "pretalab"
+  ],
+  "author": "Marylly Araújo Silva",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "^26.6.2",
+    "@types/jest": "^26.0.22",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3"
+  }
+}
